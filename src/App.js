@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
     color_main: "#495464",
     color_extra: "#e8e8e8",
-    color_active: "#ec524b",
+    color_active: "#8D021F",
     font_main: "'Lato', sans-serif",
     font_extra: "'Montserrat', sans-serif"
 }

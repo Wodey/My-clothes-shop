@@ -24,6 +24,9 @@ const Wrapper = styled.div`
     bottom: 0px;
     left: 0px;
   }
+  @media(min-width: 500px) {
+    display: none;
+  }
 `;
 
 const Line = styled.div`
