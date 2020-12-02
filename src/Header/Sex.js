@@ -23,6 +23,7 @@ const Wrapper = styled.div`
 const Item = styled.div`
   font-size: 1rem;
   padding: 10px 15px;
+  text-transform: uppercase;
 `;
 
 const Sex = ({gender, cb}) => {

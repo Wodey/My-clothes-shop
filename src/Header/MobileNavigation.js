@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Sex from './Sex';
+import Navigation from "./Navigation";
 
 const Wrapper = styled.div`
   width: 80%;
@@ -18,12 +19,20 @@ const Wrapper = styled.div`
     `};
 `;
 
+const Title = styled.div`
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 15px 0;
+`;
+
 const MobileNavigation = ({isOpen}) => {
   const [sex, setSex] = useState(false);
 
   return (
     <Wrapper isOpen={isOpen}>
       <Sex gender={sex} cb={setSex} />
+      <Title>{sex ? "Для него" : "Для нее"}</Title>
+      <Navigation />
     </Wrapper>
   )
 };
