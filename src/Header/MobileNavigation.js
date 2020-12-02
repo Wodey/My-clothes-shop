@@ -3,6 +3,23 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Sex from './Sex';
 import Navigation from "./Navigation";
+import MobileLogin from './MoblieLogin';
+import Spoiler from "./Spoiler";
+import LanguagesSmart from "./LanguagesSmart";
+
+const languages = [
+  {
+    title: "Русский",
+    val: "RU",
+  },
+  {
+    title: "English",
+    val: "ENG"
+  }
+];
+
+const DumbLanguage = <Spoiler items={languages} title="Язык" />;
+const Languages = <LanguagesSmart Component={DumbLanguage} />;
 
 const Wrapper = styled.div`
   width: 80%;
@@ -31,8 +48,13 @@ const MobileNavigation = ({isOpen}) => {
   return (
     <Wrapper isOpen={isOpen}>
       <Sex gender={sex} cb={setSex} />
-      <Title>{sex ? "Для него" : "Для нее"}</Title>
+      <Title>Навигация</Title>
       <Navigation />
+      <Title>
+      Личный кабинет
+      </Title>
+      <MobileLogin />
+      <Languages />
     </Wrapper>
   )
 };
