@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import Controller from "./Controller";
-import Navigation from "./Navigation";
-import Hide from "../Utils/Hide";
+import MobileHeader from "./MobileHeader.js";
 
 const Wrapper = styled.header`
-  height: 3.2rem;
   border-bottom: 1px solid #ccc;
 `;
 const Container = styled.div`
@@ -19,10 +16,7 @@ const Header = () => {
   return (
     <Wrapper>
       <Container>
-        <Controller />
-        <Hide toggle={window.innerWidth < 500}>
-          <Navigation />
-        </Hide>
+        <MobileHeader />
       </Container>
     </Wrapper>
   )

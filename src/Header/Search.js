@@ -1,33 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from "prop-types";
-import Hide from "../Utils/Hide.js";
 
 const Wrapper = styled.div`
-  background: green;
+  width: 1.3rem;
 `;
 const Icon = styled.img`
-  width: 1.5rem;
+  width: 100%;
+  max-width: 100%;
 `;
-const InputWrapper = styled.div``;
+const InputWrapper = styled.div`
+  display: none;
+`;
 const Input = styled.input``;
+const Close = styled.img``;
 
-const Search = ({isOpen}) => {
+const Search = () => {
   return (
     <Wrapper>
-      <Icon src="icons/loupe.svg" />
-      <Hide toggle={isOpen}>
-        <InputWrapper>
-          <Input />
-          <Icon src="icons/close-button.svg" />
-        </InputWrapper>
-      </Hide>
-    </Wrapper>
-  )
-};
+      <Icon src="./icons/loupe.svg"/>
 
-Search.propTypes = {
-  isOpen: PropTypes.bool
+      <InputWrapper>
+        <Input />
+        <Close />
+      </InputWrapper>
+    </Wrapper>
+  );
 };
 
 export default Search;

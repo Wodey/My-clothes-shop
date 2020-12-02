@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
   width: 1.5rem;
@@ -38,12 +39,16 @@ const Line = styled.div`
   height: 2px;
 `;
 
-const Hamburger = () => {
+const Hamburger = ({cb}) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={cb}>
       <Line />
     </Wrapper>
   )
+};
+
+Hamburger.propTypes = {
+  cb: PropTypes.func
 };
 
 export default Hamburger;
