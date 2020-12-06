@@ -1,14 +1,11 @@
-import React, {useState} from 'react';
+import React,{useState} from "react";
+import Languages from "./Languages";
 
-const LanguageSmart = ({Component})  => {
-  const [lang, setLang] = useState(0);
-  return (
-      <>
-        {
-          <Component getter={lang} setter={setLang} />
-        }
-      </>
-    )
+const LanguagesSmart = () => {
+  const [getLang, setLang] = useState(0);
+  return <>
+    <Languages getter={getLang} setter={setLang}/>
+  </>
 };
 
-export default LanguageSmart;
+export default LanguagesSmart;

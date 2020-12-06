@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   transition: 1s;
   background: black;
   opacity: 0.3;
+  z-index: ${props => props.zIndex || 'auto' };
   position: fixed;
   top: 0;
   right: 0;
@@ -17,15 +18,16 @@ const Wrapper = styled.div`
     `};
 `;
 
-const Dark = ({on}) => {
+const Dark = ({on,zIndex}) => {
   return (
-    <Wrapper on={on}>
+    <Wrapper on={on} zIndex={zIndex}>
     </Wrapper>
   );
 };
 
 Dark.propTypes = {
-  on: PropTypes.bool.isRequired
+  on: PropTypes.bool.isRequired,
+  zIndex: PropTypes.number
 }
 
 export default Dark;

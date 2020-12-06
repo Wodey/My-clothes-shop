@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   height: 1rem;
   opacity: 0.7;
   position: relative;
+  z-index: 5;
   &:before {
     content: "";
     background: black;

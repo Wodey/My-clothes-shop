@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
   width: 1.5rem;
+  @media(min-width: 1024px) {
+    width: 1.7rem;
+  }
 `;
 const Image = styled.img`
   width: 100%;

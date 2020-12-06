@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 10px;
   box-sizing: initial;
-  padding-bottom: 30px;
 `;
 
 const MobileLogin = () => {

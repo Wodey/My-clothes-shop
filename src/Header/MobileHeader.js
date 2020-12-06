@@ -8,7 +8,8 @@ import MobileNavigation from "./MobileNavigation";
 import Dark from "../Utils/Dark";
 const Wrapper = styled.div`
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   @media(min-width: 768px) {
     display: none;
   }
@@ -34,7 +35,7 @@ const MobileHeader = () => {
   }
   return (
     <Wrapper>
-      <Dark on={isOpen} />
+      <Dark on={isOpen}/>
       <MobileNavigation isOpen={isOpen} />
       <List isOpen={isOpen}>
         <Hamburger cb={openToggler}/>

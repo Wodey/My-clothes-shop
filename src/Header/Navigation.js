@@ -6,6 +6,11 @@ const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  @media(min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 `;
 
 const Navigation = () => {
