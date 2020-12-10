@@ -28,10 +28,13 @@ const Row = styled.div`
 `;
 
 const Word = styled.span`
-  font-size: 3rem;
+  font-size: 1.5rem;
   white-space: nowrap;
   font-weight: bold;
   color: white;
+  @media(min-width: 1024px) {
+    font-size: 2rem;
+  }
 
 `;
 const Announce = ({word}) => {

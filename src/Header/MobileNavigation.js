@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   height: 100vh;
   position: fixed;
   top: 0;
+  overflow: scroll;
   left: -100%;
   background: white;
   z-index: 2;
