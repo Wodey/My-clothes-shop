@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Sex from "./Sex";
 import Logo from './Logo';
 import IconRef from "./IconRef";
 import Languages from "./LanguagesSmart";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 import Search from "./Search";
 import Announce from "./Announce";
 
@@ -44,7 +43,6 @@ const HeaderDesk = () => {
       <TopLine>
         <LeftColumn>
           <Languages />
-          <Sex />
         </LeftColumn>
         <Logo />
         <RightColumn>

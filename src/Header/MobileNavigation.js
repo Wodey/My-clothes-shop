@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
-import Sex from './Sex';
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 import MobileLogin from './MoblieLogin';
 import MobileLanguages from "./MobileLanguagesSmart";
 
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
   left: -100%;
   background: white;
   z-index: 2;
-  padding: 15px 5%;
+  padding: 0 5% 15px 5%;
   transition: 1s;
   ${props => props.isOpen && css`
       left: 0;
@@ -29,11 +28,9 @@ const Title = styled.div`
 `;
 
 const MobileNavigation = ({isOpen}) => {
-  const [sex, setSex] = useState(false);
 
   return (
     <Wrapper isOpen={isOpen}>
-      <Sex gender={sex} cb={setSex} />
       <Title>Навигация</Title>
       <Navigation />
       <Title>
